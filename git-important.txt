@@ -1,0 +1,22 @@
+Configuring git:
+
+git config --global user.name ""
+git config --global user.email ""
+
+Getting values:
+git config --get user.name //gets the user name
+git config --get user.email // gets the user email
+
+Initialing a repository
+git init // initializes an empty repository
+
+Adding giles
+git add file_name.extension
+git add . // add all files to the staging area
+
+Removing files from staging area
+git rm --cached file_name.extension
+git rm -r --cached . // remove all files from the staging area
+
+// get the change status
+git diff // shows all the changes made to the files
