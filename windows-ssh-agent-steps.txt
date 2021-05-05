@@ -1,0 +1,19 @@
+Here are the steps to run the ssh service on windows
+
+1 - Open the PowerShell as administrator
+2 - Type those commands: 
+  # Make sure you're running as an Administrator
+  Start-Service ssh-agent
+
+  # This should return a status of Running
+  Get-Service ssh-agent
+  
+  # Now load your key files into ssh-agent
+  ssh-add ~\.ssh\id_ed25519 // this commando should run on the path your .ssh folder is placed
+  
+If everything goes well your ssh key will be added the ssh-service on windows. If not, it might be that
+the service is disabled. To enable the service, type:
+  
+  Get-Service -Name ssh-agent | Set-Service -StartupType Manual
+
+Now the service be started and you can proceed with the other two commands

@@ -20,3 +20,16 @@ git rm -r --cached . // remove all files from the staging area
 
 // get the change status
 git diff // shows all the changes made to the files
+
+//updating message of a commit
+git commit amend --m "new message" // changes the message of the commit you're currently on
+
+// listing all branches
+git branch
+
+// pushing to an existing repository (this is being made over ssh, so you gotta configure the ssh keys on your github account)
+// Link with the steps for configuring the ssh key: https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+
+git remote add origin git@github.com:user_name/repo-name.git
+git branch -M main
+git push -u origin main 
